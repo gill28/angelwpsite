@@ -116,11 +116,29 @@ add_action( 'widgets_init', 'main_widgets_init' );
 function main_scripts() {
 	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'animate-css', get_template_directory_uri() . '/css/animate.min.css' );
+
+	wp_enqueue_style( 'normalize-css', get_template_directory_uri() . '/css/normalize.css' );
+
+	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
+
+	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap-theme.min.css' );
+
+	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/the-big-picture.css' );
+
+	wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/main.css' );
+
 	wp_enqueue_script( 'main-navigation', get_template_directory_uri() . '/js/jquery.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'main-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/js/customizer.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/js/colorbox-minmin.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'main-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -128,7 +146,7 @@ function main_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'main_scripts' );
+add_action( 'wp_enqueue_scripts', 'main_scripts', 'wp_enqueue_style' );
 
 /**
  * Implement the Custom Header feature.

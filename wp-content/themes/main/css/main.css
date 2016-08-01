@@ -1,0 +1,64 @@
+
+
+body {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  background: none;
+}
+
+.full {
+  background: url(http://placehold.it/1920x1080) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+
+
+
+/*-----------------------------------
+Navigation
+-----------------------------------*/
+.main-navigation a {
+  font-size: 2.7rem;
+  padding-top: 10px;
+}
+
+.banner {
+    min-height: 100vh;
+    padding: 0;
+}
+
+section {
+    display: block;
+    float: left;
+    position: relative;
+    background: #fff;
+    margin: 0;
+    padding: 40px 60px;
+    width: 100%;
+}
+
+.chand-swing {
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 2;
+  position: absolute;
+  width: 20%;
+}
+
+.fg-book {
+  margin-top: -200px;
+  position: absolute;
+  box-shadow: 2px 2px 20px black;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+  width: 30%;
+  background: #000;
+  color: #fff;
+  font-family: arial;
+}
