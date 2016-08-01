@@ -1,4 +1,4 @@
-
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Cinzel);
 
 body {
   margin-top: 0px;
@@ -16,7 +16,15 @@ body {
   height: 100vh;
 }
 
-
+section {
+    display: block;
+    float: left;
+    position: relative;
+    background: #fff;
+    margin: 0;
+    padding: 40px 60px;
+    width: 100%;
+}
 
 
 /*-----------------------------------
@@ -27,19 +35,20 @@ Navigation
   padding-top: 10px;
 }
 
+.logo {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  padding: 6px;
+}
+
+/*-----------------------------------
+Banner
+-----------------------------------*/
+
 .banner {
     min-height: 100vh;
     padding: 0;
-}
-
-section {
-    display: block;
-    float: left;
-    position: relative;
-    background: #fff;
-    margin: 0;
-    padding: 40px 60px;
-    width: 100%;
 }
 
 .chand-swing {
@@ -52,13 +61,21 @@ section {
 
 .fg-book {
   margin-top: -200px;
-  position: absolute;
+  position: relative;
+  width: 30%;
   box-shadow: 2px 2px 20px black;
   padding: 0;
   text-transform: uppercase;
   text-align: center;
-  width: 30%;
   background: #000;
   color: #fff;
-  font-family: arial;
+  font-family: 'Cinzel', serif;
+}
+
+/*-----------------------------------
+Featured Book Section
+-----------------------------------*/
+
+.fg-section-wrap {
+  background: #000;
 }

@@ -25,36 +25,26 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-		<?php while(the_flexible_field("content_blocks")): ?>
-
-			<?php if( get_row_layout() === "logo"): ?>
-					<img src="<?php the_sub_field( 'logo_image' ); ?>">
-
-
-		<?php endif; ?>
 		<nav id="site-navigation" class="main-navigation col-lg-12 col-lg-push-4" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'main' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
-
-		<article class="full" style="background-image: url(<?php the_field( 'banner' ); ?>)">
 		<img class="chand-swing col-lg-push-10 col-lg-2" src="<?php bloginfo( 'template_url' );?>/img/chandelier-black.png" alt="chandellier">
+		<article class="full" style="background-image: url(<?php the_field( 'banner' ); ?>)">
 		</article>
 
-<section>
+<section class="fg-section-wrap">
+	<div class="row">
 
-	<div class=" fg-book col-lg-4 col-lg-push-4">
+		<div class=" fg-book col-centerd">
+			<div class="card-block"><h1>Featured Book</h1></div>
+			<a href="<?php the_field( 'book_url' ); ?>"><img class="card-img-top" src="<?php the_field( 'book_image' ); ?>" alt=""></a>
 
-		<a href="<?php the_field( 'book_url' ); ?>"><img src="<?php the_field( 'book_image' ); ?>" alt=""></a>
-		<h1>
-			Featured Book
-		</h1>
+		</div>
 
 	</div>
 
 </section>
 
-
-<?php endwhile; ?>
 
 
