@@ -19,14 +19,18 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'header' );
+
 
 				if ( have_rows( 'content_blocks' ) && ! post_password_required() ) {
 					while ( have_rows( 'content_blocks' ) ) {
 						the_row();
 
-						if ( 'logo' === get_row_layout() ) {
-							get_template_part( 'template-parts/content', 'logo' );
+						if ( 'books' === get_row_layout() ) {
+							get_template_part( 'template-parts/content', 'books' );
+						}
+
+						elseif ( 'contact' === get_row_layout() ) {
+							get_template_part( 'template-parts/content', 'contact' );
 						}
 					}
 				}

@@ -25,26 +25,31 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-		<nav id="site-navigation" class="main-navigation col-lg-12 col-lg-push-4" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'main' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-		<img class="chand-swing col-lg-push-10 col-lg-2" src="<?php bloginfo( 'template_url' );?>/img/chandelier-black.png" alt="chandellier">
-		<article class="full" style="background-image: url(<?php the_field( 'banner' ); ?>)">
-		</article>
+		<header id="header">
+				<div class="main-logo">
+					<a id="logo" href="http://www.angelitagill.com"><img src="<?php bloginfo( 'template_url' );?>/img/signature-logo.png"></a>
+				</div>
+		</header>
 
-<section class="fg-section-wrap">
-	<div class="row">
+		<div class="chand">
 
-		<div class=" fg-book col-centerd">
-			<div class="card-block"><h1>Featured Book</h1></div>
-			<a href="<?php the_field( 'book_url' ); ?>"><img class="card-img-top" src="<?php the_field( 'book_image' ); ?>" alt=""></a>
+			<img class="chand-swing col-lg-1" src="<?php bloginfo( 'template_url' );?>/img/chandelier-black.png" alt="chandellier">
 
 		</div>
 
-	</div>
+		<article class="full" style="background-image: url(<?php the_field( 'banner' ); ?>)">
+			<div class="container-fluid">
+			<?php if ( get_field('book_image') ) : ?>
+				<div class="col-lg-4">
+				<img src="<?php the_field( 'book_image' ); ?>">
+				</div>
+				<?php endif; ?>
+			</div>
+		</article>
 
-</section>
+
+
+
 
 
 

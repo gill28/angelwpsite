@@ -14,11 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'main' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'main' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'main' ), 'main', '<a href="http://angelitagill.com" rel="designer">nicholas.gill23@gmail.com</a>' ); ?>
-		</div><!-- .site-info -->
+        <div class="footer-wrap">
+            <h3><i class="fa fa-copyright"></i> Copyright 2016, Angelita Gill</h3>
+        </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
