@@ -132,6 +132,8 @@ function main_scripts() {
 
 	wp_enqueue_style( 'angel-fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
 
+	wp_enqueue_style( 'angel-starter-css', get_template_directory_uri() . '/css/other.css' );
+
 	wp_enqueue_style( 'angel-main-css', get_template_directory_uri() . '/css/main.css' );
 
 	wp_enqueue_script( 'angel-jquery-wp', get_template_directory_uri() . '/js/jquery.min.js', array(), '20151215', true );

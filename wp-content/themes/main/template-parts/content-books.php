@@ -17,7 +17,7 @@
             <div class="row">
         <?php while( have_rows('book_information') ) : the_row(); ?>
 
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <div class="col-1-5">
 
                     <div class="hovereffect">
 

@@ -26,10 +26,12 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 		<header id="header">
-				<div class="main-logo">
-					<a id="logo" href="http://www.angelitagill.com"><img src="<?php bloginfo( 'template_url' );?>/img/signature-logo.png"></a>
-				</div>
+		<i class="fa fa-facebook"></i><i class="fa fa-twitter"></i>
 		</header>
+
+		<img class="main-logo" src="<?php bloginfo( 'template_url' );?>/img/signature-logo.png" alt="chandellier">
+
+
 
 		<div class="chand">
 
@@ -38,10 +40,15 @@
 		</div>
 
 		<article class="full" style="background-image: url(<?php the_field( 'banner' ); ?>)">
-			<div class="container-fluid">
+			<div class="container">
 			<?php if ( get_field('book_image') ) : ?>
-				<div class="col-lg-4">
-				<img src="<?php the_field( 'book_image' ); ?>">
+				<div class="row">
+					<div class="featured-img-wrap">
+						<div class="featured-img">
+							<h2>Featured Book</h2>
+							<a href="<?php the_field( 'book_url' ); ?>"><img class="feat-bk" src="<?php the_field( 'book_image' ); ?>"></a>
+						</div>
+					</div>
 				</div>
 				<?php endif; ?>
 			</div>

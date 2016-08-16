@@ -2,11 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
 body {
-  margin-top: 0px;
-  margin-bottom: 50px;
-  background: #000;
-  padding: 0;
-  margin:0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .full {
@@ -29,9 +26,6 @@ section {
     padding: 40px 20px;
     width: 100%;
 }
-*, *:before, *:after {
-  box-sizing: initial !important;
-}
 
 /*-----------------------------------
 Navigation
@@ -39,12 +33,13 @@ Navigation
 .responsive-menu-inner, .responsive-menu-inner::before,
 .responsive-menu-inner::after {
   background-color: #000 !important;
-  width: 60px !important;
-  height: 3px !important;
 }
-.responsive-menu-box {
-  width: 60px !important;
-  height: 20px !importan;
+#responsive-menu-container{
+  background: #212121 !important;
+}
+
+#responsive-menu-container li.responsive-menu-item a .responsive-menu-subarrow {
+  right: 15px !important;
 }
 
 #responsive-menu-container #responsive-menu
@@ -56,14 +51,9 @@ li.responsive-menu-item .responsive-menu-item-link {
   background: transparent !important;
 }
 
-#responsive-menu-container #responsive-menu,
-#responsive-menu-container #responsive-menu ul {
-  margin-top: 70px !important;
-}
-
-.responsive-menu-button {
-  top: 5px !important;
-  right: 10% !important;
+#responsive-menu-container #responsive-menu-wrapper {
+  padding-top: 55px !important;
+  background: #fff !important;
 }
 
 .main-navigation a {
@@ -95,49 +85,60 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 }
 
 .main-logo {
-  width: 100%;
-  margin: 0 22%;
+    width: 49%;
+    margin: 0px 23%;
+    position: absolute;
+    top: 8%;
 }
 
 
 /*-----------------------------------
 Banner
 -----------------------------------*/
+#header i {
+  text-align: center;
+  font-size: 3.4rem;
+  display: inline-block;
+  padding: 13px;
+  position: relative;
+  cursor: pointer;
+}
 
+#header i:hover {
+    color: #EC11DC;
+}
 .banner {
     min-height: 100vh;
     padding: 0;
 }
 
 .chand-swing {
-  -webkit-animation-duration: 5s;
-  -webkit-animation-delay: 1s;
-  -webkit-animation-iteration-count: 2;
-  position: absolute;
-  width: 16%;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 2;
+    position: absolute;
+    width: 14%;
+    z-index: 99999;
+    margin-left: 25px;
 }
 
-.fg-book {
-  padding-top: -200px;
-  position: relative;
-  width: 30%;
-  margin: -200px auto;
-  box-shadow: 2px 2px 20px black;
-  padding: 0;
-  text-transform: uppercase;
-  text-align: center;
-  background: #000;
-  color: #fff;
-  font-family: 'Cinzel', serif;
+#responsive-menu-container #responsive-menu
+li.responsive-menu-item a
+.responsive-menu-subarrow {
+  border-left: none !important;
 }
 
-.card-block {
-  padding: 1px;
-}
 
 /*-----------------------------------
 Featured Book Section
 -----------------------------------*/
+.feat-bk {
+  box-shadow: 2px 2px 20px #000;
+}
+.featured-img h2 {
+  color: #fff;
+  text-shadow: 2px 2px 20px #000;
+}
 
 .fg-section-wrap {
   text-align: center;
@@ -355,10 +356,6 @@ Book Information Pop Up
   padding: 0 10px;
 }
 
-.bookInformation img {
-  margin-bottom: 65px;
-}
-
 .bookInformation a {
   font-size: 5.4rem;
   color: #fff;
@@ -408,8 +405,24 @@ Book Information Pop Up
   width: 30%;
 }
 
+section.book-wrap {
+  padding: 200px 26px 20px 20px;
+}
 
+.featured-img-wrap {
+  width: 100%;
+  margin: 0 auto;
+}
 
+.featured-img {
+    position: absolute;
+    bottom: 0;
+    top: 409px;
+    z-index: 95;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
 
 /*----------------------------
 Footer
