@@ -26,10 +26,37 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 		<header id="header">
-		<i class="fa fa-facebook"></i><i class="fa fa-twitter"></i>
+
+			<nav class="close-menu">
+				<ul>
+					<li><a href="http://www.angelitagill.com">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#books">Book Series</a>
+						<ul>
+							<li><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'The Priceless Collection' ) ) ); ?>">The Priceless Collection</a></li>
+							<li><a href="#">1 Night Stand</a></li>
+							<li><a href="#">Paranormal/Fantasy</a></li>
+							<li><a href="#">Contemporary</a></li>
+							<li><a href="#">Holidays</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<div class="icons">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+			</div>
+			</nav>
+
+
+
+			<div class="main-logo">
+				<img class="main-logo" src="<?php bloginfo( 'template_url' );?>/img/signature-logo.png" alt="chandellier">
+			</div>
+
 		</header>
 
-		<img class="main-logo" src="<?php bloginfo( 'template_url' );?>/img/signature-logo.png" alt="chandellier">
+
 
 
 
@@ -39,7 +66,12 @@
 
 		</div>
 
-		<article class="full" style="background-image: url(<?php the_field( 'banner' ); ?>)">
+		<?php if ( get_field('banner') ) : ?>
+
+
+
+		<article class="full" style="background-image: url(<?php echo get_field('banner'); ?>)">
+				<?php endif; ?>
 			<div class="container">
 			<?php if ( get_field('book_image') ) : ?>
 				<div class="row">

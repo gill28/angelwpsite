@@ -9,7 +9,7 @@
  */
 ?>
 
-<section class="full book-wrap">
+<section id="books" class="full book-wrap">
 
     <h2>Books</h2>
     <?php if ( have_rows('book_information') ) : ?>

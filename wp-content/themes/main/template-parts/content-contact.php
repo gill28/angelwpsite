@@ -9,7 +9,7 @@
  */
 ?>
 
-<section class="full contact-sec">
+<section id="about" class="full contact-sec">
     <div class="contact-ct">
     <div class="content">
     <?php the_sub_field( 'content' ); ?>
