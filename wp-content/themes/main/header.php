@@ -26,25 +26,24 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 		<header id="header">
-
 			<nav class="close-menu">
 				<ul>
-					<li><a href="http://www.angelitagill.com">Home</a></li>
+					<li><a href="http://angel.angelitagill.com">Home</a></li>
 					<li><a href="#about">About</a></li>
-					<li><a href="#books">Book Series</a>
+					<li><a href="#">Book Series</a>
 						<ul>
 							<li><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'The Priceless Collection' ) ) ); ?>">The Priceless Collection</a></li>
-							<li><a href="#">1 Night Stand</a></li>
-							<li><a href="#">Paranormal/Fantasy</a></li>
-							<li><a href="#">Contemporary</a></li>
-							<li><a href="#">Holidays</a></li>
+							<li><a href="<?php echo esc_url( get_permalink( get_page_by_title( '1 Night Stand' ) ) ); ?>">1 Night Stand</a></li>
+							<li><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Paranormal/Fantasy' ) ) ); ?>">Paranormal/Fantasy</a></li>
+							<li><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contemporary' ) ) ); ?>">Contemporary</a></li>
+							<li><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Holidays' ) ) ); ?>">Holidays</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact' ) ) ); ?>">Contact</a></li>
 				</ul>
 				<div class="icons">
-				<i class="fa fa-facebook"></i>
-				<i class="fa fa-twitter"></i>
+				<a href="https://www.facebook.com/authorangelita/?fref=ts&ref=br_tf"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/Underawildsky"><i class="fa fa-twitter"></i></a>
 			</div>
 			</nav>
 
@@ -57,17 +56,17 @@
 		</header>
 
 
+		<?php if(is_front_page() ) { ?>
 
-
-
-		<div class="chand">
+			<div class="chand">
 
 			<img class="chand-swing col-lg-1" src="<?php bloginfo( 'template_url' );?>/img/chandelier-black.png" alt="chandellier">
 
 		</div>
 
-		<?php if ( get_field('banner') ) : ?>
+		<?php } ?>
 
+		<?php if ( get_field('banner') ) : ?>
 
 
 		<article class="full" style="background-image: url(<?php echo get_field('banner'); ?>)">

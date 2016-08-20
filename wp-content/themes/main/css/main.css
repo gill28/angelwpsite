@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script|Cinzel);
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display|Slabo+27px|Trirong';
+
+
+/*font-family: 'Slabo 27px', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Trirong', serif;*/
 
 body {
   margin-top: 0;
@@ -25,6 +31,11 @@ section {
     margin: 0;
     padding: 40px 20px;
     width: 100%;
+}
+
+a:hover {
+  color: #EC11DC;
+  cursor: pointer;
 }
 
 /*-----------------------------------
@@ -53,7 +64,7 @@ li.responsive-menu-item .responsive-menu-item-link {
 
 #responsive-menu-container #responsive-menu-wrapper {
   padding-top: 55px !important;
-  background: #fff !important;
+  background: #212121 !important;
 }
 
 .main-navigation a {
@@ -161,6 +172,11 @@ nav ul {
 /*-----------------------------------
 Banner
 -----------------------------------*/
+.title-series {
+  background: #000;
+  opacity: 0.8;
+}
+
 #header i {
   text-align: center;
   font-size: 3.4rem;
@@ -281,17 +297,28 @@ Featured Book Section
   font-weight: 700;
   text-shadow: 2px 2px 20px white;
   padding-bottom: 20px;
+  padding-top: 130px;
 }
 
 .books img {
   box-shadow: 2px 2px 20px black;
 }
 
+#books .row .col-1-5 {
+  padding: 9px 30px;
+}
+
 .book-ct {
   background: #000;
   padding: 20px;
-  font-family: 'Noto Sans', sans-serif;
   color: grey;
+}
+
+.book-ct p {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.2;
+  font-family: 'Playfair Display', sans-serif;
 }
 
 .contact-sec {
@@ -330,6 +357,7 @@ Hover Effect for Book images
   position: relative;
   text-align: center;
   cursor: default;
+  box-shadow: 2px 2px 20px #000;
 }
 
 .hovereffect .overlay {
@@ -363,7 +391,6 @@ Hover Effect for Book images
   transition: all 0.35s;
   width: 100%;
   height: 100%;
-  padding: 5px;
 }
 
 .hovereffect:hover img {
@@ -456,14 +483,19 @@ Book Information Pop Up
 }
 
 #cboxClose {
-  top: -28px;
-  right: -39px;
-  background: url(../img/close.png);
-  width: 44px;
-  color: #fff;
-  height: 44px;
-  text-indent: -9999px;
-  position: absolute;
+    top: 17px;
+    right: 34px;
+    background-image: url(../img/button_cancel.png);
+    width: 44px;
+    color: #fff;
+    height: 44px;
+    opacity: 1;
+    position: absolute;
+}
+
+#cboxClose:hover {
+  background-position: top center;
+
 }
 
 .card-wrap {
@@ -477,6 +509,7 @@ Book Information Pop Up
 
 section.book-wrap {
   padding: 200px 26px 20px 20px;
+  box-shadow: 0px -8px 85px #000;
 }
 
 .featured-img-wrap {
@@ -495,14 +528,423 @@ section.book-wrap {
 }
 
 /*----------------------------
+Book Series
+------------------------------*/
+
+.book-series .container {
+  position: relative;
+  text-align: center;
+}
+
+.book-series h1 {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 4.4rem;
+    font-family: 'Cinzel', sans-serif;
+    color: #fff;
+    margin: 0 auto;
+    text-shadow: 2px 2px 9px #000;
+    padding: 10px;
+    margin-top: 24px;
+}
+
+.book-bk-wrap {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  opacity: 0.9;
+  border: 4px solid white;
+}
+
+.bk-shadow {
+  box-shadow: 2px 2px 20px #fff;
+}
+
+.content p {
+  font-family: 'Playfair display', sans-serif;
+}
+
+font_4 h2:hover {
+  cursor: pointer;
+  color: #EC11DC;
+}
+
+
+
+/*----------------------------
+Contact Form
+------------------------------*/
+.contact-form {
+  background-image: url(../img/girl-left.jpg);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  text-align: center;
+  padding: 100px;
+}
+
+.contact-form h2 {
+  font-size: 5.4rem;
+  color: #fff;
+}
+
+div.wpcf7-mail-sent-ok {
+    border: 2px solid #f00fff;
+    color: #fff;
+}
+
+label {
+  color: #EC11DC;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    font-size: 1.75rem;
+    border: 1px solid;
+    border-color: #ff00f2 #ff00f2 #ff00f2;
+    border-radius: 3px;
+    background: #7b7b7b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+    color: #ffffff;
+    line-height: 1;
+    padding: .6em 1em .4em;
+    text-shadow: none;
+}
+
+/*----------------------------
 Footer
 ------------------------------*/
 .footer-wrap  {
   width: 100%;
   text-align: center;
-  padding: 20px;
 }
 .footer-wrap h3 {
   font-family: 'Cinzel', serif;
   color: #fff;
+}
+
+/*----------------------------
+Media Queries
+------------------------------*/
+
+@media only screen and (max-width:1280px) {
+
+}
+
+@media only screen and (max-width:1024px) {
+
+  /* Columns */
+  .row .col-1-5 {
+    width: 33.33%;
+    margin-bottom: 30px;
+  }
+  .row .col-1-5:nth-child(4n) {
+    margin-left: 16.66%;
+    margin-bottom: 0;
+  }
+  .row .col-1-5:nth-child(5n) {
+    margin-bottom: 0;
+  }
+
+}
+
+@media only screen and (max-width:900px) {
+  #header {
+    position: relative;
+    padding: 0;
+  }
+  #logo {
+    left: 30px;
+  }
+  #content {
+    z-index: 10;
+  }
+  /* Mobile Nav Icon */
+  #header nav #menu-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin: 0;
+    padding: 10px 35px 10px 0px;
+    cursor: pointer;
+    visibility: visible;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+  }
+  #menu-icon span,
+  #menu-icon span:before,
+  #menu-icon span:after {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 35px;
+    top: 0;
+    background: #333;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    content: '';
+  }
+  #menu-icon span:before {
+    top: 8px;
+  }
+  #menu-icon span:after {
+    top: 16px;
+  }
+  #menu-icon.active span {
+    background-color: transparent;
+  }
+  #menu-icon.active span:before,
+  #menu-icon.active span:after {
+    top: 8px;
+    left: 0px;
+  }
+  #menu-icon.active span:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  #menu-icon.active span:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  /* Mobile Nav Menu */
+  nav#menu {
+    float: none;
+    margin: 0;
+  }
+  nav#menu ul {
+    background: #ebebeb;
+    display: none;
+    overflow-x: hidden;
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 80px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  nav#menu.active ul {
+    display: block;
+  }
+  nav#menu ul li {
+    float: none;
+    clear: both;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: solid 1px #ddd;
+  }
+  nav#menu ul li:last-child {
+    border-bottom: none;
+  }
+  nav#menu ul li > a, nav#menu ul li:last-child > a {
+    display: block;
+    line-height: 1.5;
+    margin: 0;
+    padding: 15px 30px;
+    border: none;
+  }
+  /* Mobile Drop-Down Icons */
+  nav#menu ul li.menu-item-has-children > a:after {
+    position: absolute;
+      font-size: 16px;
+      top: 15px;
+      right: 30px;
+  }
+  nav#menu ul li.menu-item-has-children > a:after,
+  nav#menu ul li.menu-item-has-children:hover > a:after {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  nav#menu ul li.menu-item-has-children.active > a:after,
+  nav#menu ul li.menu-item-has-children.active:hover > a:after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  /* Mobile Sub-Menu's */
+  nav#menu ul li.menu-item-has-children > ul.sub-menu,
+  nav#menu ul li.menu-item-has-children > ul.sub-menu li {
+    padding: 0;
+    border: none;
+  }
+  nav#menu ul li.menu-item-has-children > ul.sub-menu,
+  nav#menu ul li.menu-item-has-children:hover > ul.sub-menu {
+    display: none;
+    background: #f3f3f3;
+    height: inherit;
+    width: 100%;
+    margin: 0;
+    padding: 8px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  nav#menu ul li.menu-item-has-children.active > ul.sub-menu,
+  nav#menu ul li.menu-item-has-children.active:hover > ul.sub-menu {
+    display: block;
+  }
+  nav#menu ul li.menu-item-has-children > ul.sub-menu li a {
+    font-size: 15px;
+    padding: 6px 30px;
+    border: none;
+  }
+  nav#menu-menu ul li.menu-item-has-children > ul.sub-menu li a:before {
+    content: '- ';
+  }
+
+  /* Columns */
+  .col-2-3,
+  .col-1-3.single {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+  .col-1-3.single ~ .col-2-3,
+  .col-2-3 ~ .col-1-3 {
+    width: 100% !important;
+  }
+
+  .chand-swing {
+    width: 28% !important;
+      z-index: 0 !important;
+      margin-left: 6px !important;
+  }
+
+  .full {
+    height: 100%;
+  }
+
+  .responsive-menu-button {
+    width: 40px;
+    height: 40px;
+    background: #fff !important;
+    position: fixed;
+    top: 10px;
+    right: 5%;
+}
+
+}
+@media only screen and (max-width:768px) {
+  /* Columns */
+  .row .col-1, .row .col-1-2, .row .col-1-3, .row .col-2-3 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .row .col-1-4 {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .row .col-1-4:nth-child(3n), .row .col-1-4:nth-child(4n) {
+    margin-bottom: 0;
+  }
+  .row .col-3-4,
+  /* .row .col-3-4 + .row .col-1-4, */
+  .row .col-3-4 ~ .row .col-1-4,
+  .row .col-1-4.singleCol {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .row .col-1-5 {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .row .col-1-5:nth-child(4n) {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .row .col-1-5:nth-child(5n) {
+    margin-left: 25%;
+  }
+  .row .col-1:last-child, .row .col-1-2:last-child, .row .col-1-3:last-child, .row .col-2-3:last-child {
+    margin-bottom: 0;
+  }
+
+  #responsive-menu-container {
+    width: 100% !important;
+  }
+
+  .hovereffect {
+      width: 60%;
+      float: none;
+      margin: 0 auto;
+  }
+
+  .main-logo {
+    width: 95%;
+    margin: 17% 3%;
+    position: absolute;
+    top: 41%;
+    z-index: 0;
+  }
+  .contact-form {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width:600px) {
+  /* Sections */
+  section {
+    padding: 40px 30px;
+  }
+
+  /* Columns */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row .col-1, .row .col-1-2, .row .col-2-3, .row .col-1-3, .row .col-1-4, .row .col-3-4 {
+    padding: 0 !important;
+  }
+  .row .col-1-4 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .row .col-1-5 {
+    width: 100%;
+    padding: 0 !important;
+    margin-bottom: 30px;
+  }
+  .row .col-1-5:nth-child(4n) {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .row .col-1-5:nth-child(5n) {
+    margin-left: 0;
+  }
+  .row .col-1-4:last-child, .row .col-1-5:last-child {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width:480px) {
+  /* Columns */
+  .row .col-1, .row .col-1-2, .row .col-1-3, .row .col-2-3, .row .col-1-4, .row .col-3-4, .row .col-1-5 {
+    padding: 0;
+  }
+}
+@media only screen and (max-width:320px) {
+
 }

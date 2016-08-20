@@ -16,6 +16,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -32,6 +34,13 @@ get_header(); ?>
 						elseif ( 'contact' === get_row_layout() ) {
 							get_template_part( 'template-parts/content', 'contact' );
 						}
+
+						elseif ( 'book_series' === get_row_layout() ) {
+							get_template_part( 'template-parts/content', 'book-series' );
+						}
+						elseif ( 'form' === get_row_layout() ) {
+							get_template_part( 'template-parts/content', 'form' );
+						}
 					}
 				}
 
@@ -42,3 +51,4 @@ get_header(); ?>
 
 <?php
 get_footer();
+

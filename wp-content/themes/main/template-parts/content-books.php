@@ -36,12 +36,13 @@
                     </div>
 
                 </div>
+
                 <div style="display: none;">
 
-                    <section href="http://www.angelswebsite.dev/1-2/" id="<?php the_sub_field( 'book_id' ); ?>" class="books">
+                    <section id="<?php the_sub_field( 'book_id' ); ?>" class="books">
 
                         <div class="bookInformation" class="row">
-                            <button type="button" id="cboxClose">close</button>
+
                             <h2><?php the_sub_field( 'book_title' ); ?></h2>
 
                                 <a href="<?php the_sub_field( 'book_url' ); ?>"><img src="<?php the_sub_field( 'book_image' ); ?>" alt=""></a>
