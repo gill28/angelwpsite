@@ -69,7 +69,7 @@
 		<?php if ( get_field('banner') ) : ?>
 
 
-		<article class="full" style="background-image: url(<?php echo get_field('banner'); ?>)">
+		<article class="full top-home" style="background-image: url(<?php echo get_field('banner'); ?>)">
 				<?php endif; ?>
 			<div class="container">
 			<?php if ( get_field('book_image') ) : ?>

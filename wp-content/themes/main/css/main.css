@@ -6,12 +6,6 @@
 /*font-family: 'Slabo 27px', serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Trirong', serif;*/
-
-body {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .full {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -97,7 +91,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 
 .main-logo {
     width: 70%;
-    margin: 0px 15%;
+    margin: -8% 15%;
     position: absolute;
     top: 8%;
     z-index: 0;
@@ -569,6 +563,9 @@ font_4 h2:hover {
   color: #EC11DC;
 }
 
+.book-series.full {
+  height: 100%;
+}
 
 
 /*----------------------------
@@ -603,7 +600,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     border-color: #ff00f2 #ff00f2 #ff00f2;
     border-radius: 3px;
     background: #7b7b7b;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
     color: #ffffff;
     line-height: 1;
     padding: .6em 1em .4em;
@@ -835,8 +832,13 @@ Media Queries
       margin-left: 6px !important;
   }
 
-  .full {
+  article.full.top-home {
+    height: 100vh;
+  }
+
+  .book-series.full {
     height: 100%;
+    padding: 20px 0;
   }
 
   .responsive-menu-button {
@@ -846,6 +848,10 @@ Media Queries
     position: fixed;
     top: 10px;
     right: 5%;
+}
+
+.book-series h1 {
+  font-size: 3.4rem;
 }
 
 }
@@ -904,6 +910,16 @@ Media Queries
   .contact-form {
     padding: 10px;
   }
+
+  #cboxClose {
+    top: 45px;
+    right: 23px;
+  }
+
+  .contact-form h2 {
+    padding-top: 60px;
+  }
+
 }
 @media only screen and (max-width:600px) {
   /* Sections */
