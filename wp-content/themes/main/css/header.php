@@ -40,7 +40,6 @@
 						</ul>
 					</li>
 					<li><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact' ) ) ); ?>">Contact</a></li>
-					<li><a href="http://angelitagill.us10.list-manage2.com/subscribe?u=200d0986c71fdb9c8593530e6&id=c2d58121bb">Subscribe</a></li>
 				</ul>
 				<div class="icons">
 				<a href="https://www.facebook.com/authorangelita/?fref=ts&ref=br_tf"><i class="fa fa-facebook"></i></a>
@@ -50,7 +49,7 @@
 
 
 
-			<div class="logo-wrap">
+			<div class="main-logo">
 				<img class="main-logo" src="<?php bloginfo( 'template_url' );?>/img/signature-logo.png" alt="chandellier">
 			</div>
 

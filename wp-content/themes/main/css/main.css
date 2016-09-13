@@ -89,14 +89,6 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
   width: 100%;
 }
 
-.main-logo {
-    width: 70%;
-    margin: -8% 15%;
-    position: absolute;
-    top: 8%;
-    z-index: 0;
-}
-
 nav {
   text-align: center;
 }
@@ -204,6 +196,15 @@ li.responsive-menu-item a
   border-left: none !important;
 }
 
+  .logo-wrap {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .main-logo {
+    width: 50%;
+  }
 
 /*-----------------------------------
 Featured Book Section
@@ -458,9 +459,8 @@ Book Information Pop Up
 }
 
 .bookInformation {
-  background-image: url(../img/individual-bk.png);
-  background-position: center center;
-  background-size: cover;
+  background: #fff;
+  box-shadow: inset 15px 4px 76px #000;
   font-size: 2.3rem;
   text-align: center;
 }
@@ -848,11 +848,7 @@ Media Queries
     position: fixed;
     top: 10px;
     right: 5%;
-}
-
-.book-series h1 {
-  font-size: 3.4rem;
-}
+  }
 
 }
 @media only screen and (max-width:768px) {
@@ -900,13 +896,6 @@ Media Queries
       margin: 0 auto;
   }
 
-  .main-logo {
-    width: 95%;
-    margin: 17% 3%;
-    position: absolute;
-    top: 41%;
-    z-index: 0;
-  }
   .contact-form {
     padding: 10px;
   }
@@ -918,6 +907,10 @@ Media Queries
 
   .contact-form h2 {
     padding-top: 60px;
+  }
+
+  .book-series h1 {
+    font-size: 3.0rem;
   }
 
 }

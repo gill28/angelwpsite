@@ -13,12 +13,12 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-        <div class="footer-wrap">
-            <h3><i class="fa fa-copyright"></i> Copyright 2016, Angelita Gill</h3>
-        </div>
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+    	<footer id="colophon" class="site-footer" role="contentinfo">
+            <div class="footer-wrap">
+                <h3><i class="fa fa-copyright"></i> Copyright 2016, Angelita Gill</h3>
+            </div>
+    	</footer><!-- #colophon -->
+    </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
